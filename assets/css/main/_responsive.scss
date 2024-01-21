@@ -6,7 +6,6 @@
   /**
      * CUSTOM PROPERTY
      */
-
   :root {
     /**
        * typography
@@ -102,26 +101,28 @@
      * PRICING
      */
 
-  .filter-btn .btn-icon {
-    display: block;
-    font-size: 55px;
-    line-height: 1;
-    margin-block-end: 5px;
-  }
+  .pricing {
+    .filter-btn .btn-icon {
+      display: block;
+      font-size: 55px;
+      line-height: 1;
+      margin-block-end: 5px;
+    }
 
-  .pricing-card {
-    flex-wrap: nowrap;
-    align-items: center;
-    gap: 30px;
-  }
+    .pricing-tab-container .grid-list .pricing-card {
+      flex-wrap: nowrap;
+      align-items: center;
+      gap: 30px;
 
-  .pricing-card .wrapper {
-    order: 0;
-  }
+      .wrapper {
+        order: 0;
+      }
 
-  .pricing-card .card-price {
-    align-self: flex-start;
-    line-height: 1.6;
+      .card-price {
+        align-self: flex-start;
+        line-height: 1.6;
+      }
+    }
   }
 
   /**
@@ -144,20 +145,24 @@
      * FOOTER
      */
 
-  .footer .email-field {
-    margin-block-end: 0;
-    text-align: left;
-    font-size: var(--fs-18);
-    padding: 10px 15px;
-    padding-inline-end: 210px;
-  }
+  .footer {
+    .footer-top .footer-brand .input-wrapper {
+      .email-field {
+        margin-block-end: 0;
+        text-align: left;
+        font-size: var(--fs-18);
+        padding: 10px 15px;
+        padding-inline-end: 210px;
+      }
 
-  .footer .btn {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    bottom: 15px;
-    width: max-content;
+      .btn {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        bottom: 15px;
+        width: max-content;
+      }
+    }
   }
 
   .footer-link-box {
@@ -228,12 +233,14 @@
      * PRICING
      */
 
-  .pricing-tab-container {
-    padding: 40px;
-  }
+  .pricing {
+    .pricing-tab-container {
+      padding: 40px;
 
-  .pricing-card .wrapper {
-    margin-inline-end: auto;
+      .grid-list .pricing-card .wrapper {
+        margin-inline-end: auto;
+      }
+    }
   }
 
   /**
@@ -252,12 +259,11 @@
      * APPOINTMENT
      */
 
-  .appoin-card .card-banner {
-    display: block;
-  }
-
-  .appoin-card {
+  .appoin .appoin-card {
     display: flex;
+    .card-banner {
+      display: block;
+    }
   }
 
   /**
@@ -332,11 +338,11 @@
   .hero {
     --section-padding: 150px;
     padding-block-start: calc(var(--section-padding) + 100px);
-  }
 
-  .hero-title,
-  .hero-text {
-    max-width: 600px;
+    .hero-title,
+    .hero-text {
+      max-width: 600px;
+    }
   }
 
   /**
