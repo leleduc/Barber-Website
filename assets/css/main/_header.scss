@@ -1,0 +1,123 @@
+.header-top-item,
+.header .btn {
+  display: none;
+}
+
+.header-top-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .social-list {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-block: 15px;
+
+    .social-link {
+      color: var(--sonic-silver);
+      font-size: 15px;
+      transition: var(--transition-1);
+    }
+
+    .social-link:is(:hover, :focus) {
+      color: var(--indian-yellow);
+    }
+  }
+}
+
+.header-bottom {
+  position: absolute;
+  top: 45px;
+  left: 0;
+  width: 100%;
+  padding-block: 10px;
+  z-index: 4;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo {
+      color: var(--indian-yellow);
+      font-family: var(--ff-oswald);
+      font-size: 2.7rem;
+      font-weight: var(--fw-600);
+      text-transform: uppercase;
+      line-height: 1.4;
+
+      .span {
+        color: var(--white);
+        font-family: var(--ff-rubik);
+        font-size: 1.3rem;
+        font-weight: var(--fw-300);
+        text-transform: capitalize;
+        letter-spacing: 2px;
+      }
+    }
+
+    .navbar {
+      position: absolute;
+      padding-inline: 0;
+      top: 100%;
+      left: 15px;
+      right: 15px;
+      background-color: var(--rich-black-fogra-39);
+      max-height: 0;
+      overflow: hidden;
+      transition: 0.15s var(--cubic-out);
+
+      .navbar-list {
+        border-block-start: 1px solid var(--jet);
+        margin-block: 25px;
+        width: 100%;
+
+        .navbar-item {
+          border-block-end: 1px solid var(--jet);
+
+          .navbar-link {
+            color: var(--white);
+            font-family: var(--ff-oswald);
+            font-weight: var(--fw-600);
+            text-transform: uppercase;
+            line-height: 1.5;
+            padding: 10px 30px;
+            transition: var(--transition-1);
+          }
+
+          .navbar-link:is(:hover, :focus) {
+            color: var(--indian-yellow);
+          }
+        }
+      }
+    }
+
+    .navbar.active {
+      max-height: 321px;
+      transition-duration: 0.5s;
+    }
+
+    .nav-toggle-btn {
+      color: var(--white);
+      font-size: 40px;
+    }
+  }
+}
+
+.header-bottom.active {
+  position: fixed;
+  top: 0;
+  background-color: var(--rich-black-fogra-39);
+  transform: translateY(-100%);
+  animation: slideIn 0.5s ease forwards;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,16 @@
+.hero {
+  --section-padding: 100px;
+  padding-block-start: calc(var(--section-padding) + 40px);
+  background-position: left;
+  .hero-text {
+    color: var(--white);
+    margin-block: 15px 40px;
+  }
+}
+
+.hero::before {
+  inset: 0;
+  background-color: var(--rich-black-fogra-39_50);
+  mix-blend-mode: multiply;
+  z-index: -1;
+}
